@@ -32,9 +32,9 @@ class OutputToScreen(Output):
 
     def update(self, frame) -> None:
         self_frame = frame 
-        self.display_output_header()
+        self._display_output_header()
         self.display_protocol_info()
-        self.display_packet_contents()
+        self._display_packet_contents()
     
     def _display_output_header(self) -> None:
         local_time = time.strftime("%H:%M:%S", time.localtime())
